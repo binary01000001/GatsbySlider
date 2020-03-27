@@ -1,7 +1,7 @@
 import React from 'react'
 import { Modal, Button } from 'antd'
 import 'antd/dist/antd.css'
-import HeaderAlert from './HeaderAlert'
+import Slider from './Slider'
 
 class App extends React.Component {
   state = { visible: false };
@@ -39,7 +39,7 @@ class App extends React.Component {
           onCancel={this.handleCancel}
           footer={null}
         >
-          <HeaderAlert />
+          <Slider />
         </Modal>
       </div>
     )
