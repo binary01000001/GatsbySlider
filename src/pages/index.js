@@ -1,21 +1,49 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import { Modal, Button } from 'antd'
+import 'antd/dist/antd.css'
+import HeaderAlert from './HeaderAlert'
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+class App extends React.Component {
+  state = { visible: false };
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+  showModal = () => {
+    this.setState({
+      visible: true,
+    });
+  };
 
-export default IndexPage
+  handleOk = e => {
+    console.log(e);
+    this.setState({
+      visible: false,
+    });
+  };
+
+  handleCancel = e => {
+    console.log(e);
+    this.setState({
+      visible: false,
+    });
+  };
+
+  render() {
+    return (
+      <div>
+        <Button type="primary" onClick={this.showModal}>
+          Open Modal
+        </Button>
+        <Modal
+          title={null}
+          visible={this.state.visible}
+          onOk={this.handleOk}
+          onCancel={this.handleCancel}
+          footer={null}
+        >
+          <HeaderAlert />
+        </Modal>
+      </div>
+    )
+  }
+}
+
+export default App
