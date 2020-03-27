@@ -79,7 +79,7 @@ const Image = styled.div`
 `
 const Person = styled.div` 
   position:absolute;
-  top:74%;
+  bottom:-26px;
   left:14px;
   z-index:5;
 `
@@ -103,7 +103,8 @@ const CircleRight = styled.div`
   height:60px;
   width:60px;
   border-radius:50%;
-  background:#fff;
+  /* background:#fff; */
+  background:#072B48;
   z-index:6;
   /* right:-60px; */
   right:-50px;
@@ -119,7 +120,7 @@ function HeaderAlert() {
         <img src={require('../images/hello.svg')} alt="Persona con una laptop" style={{ height: 'auto', width: '125px' }} />
       </Image>
       <Person>
-        <img src={require('../images/Person.svg')} alt="Persona con un megafono" style={{ height: 'auto', width: '145px'}}/>
+        <img src={require('../images/Person.svg')} alt="Persona con un megafono" style={{ height: 'auto', width: '145px' }} />
       </Person>
       <TitleAlert>
         <Title>Comunicado Administradores</Title>
@@ -130,7 +131,7 @@ function HeaderAlert() {
         <LeftOutlined style={{ fontSize: '20px', color: '#fff' }} />
       </CircleLeft>
       <CircleRight>
-        <RightOutlined style={{ fontSize: '20px', color: '#08c' }} />
+        <RightOutlined style={{ fontSize: '20px', color: '#fff' }} />
       </CircleRight>
       <Container>
         <p style={{ textAlign: 'justify' }}>
