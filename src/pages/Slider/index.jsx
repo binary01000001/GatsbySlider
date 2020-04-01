@@ -65,7 +65,7 @@ function Slider() {
         setPosition(counter)
       }
     }
-    setShow(arrayRelease[counter].type === 'layout1' ? <LayoutOne release={arrayRelease[counter]} /> : arrayRelease[counter].type === 'layout2' ? <LayoutTwo release={arrayRelease[counter]} /> : <LayoutThree release={arrayRelease[counter]} />)
+    position !== counter && setShow(arrayRelease[counter].type === 'layout1' ? <LayoutOne release={arrayRelease[counter]} /> : arrayRelease[counter].type === 'layout2' ? <LayoutTwo release={arrayRelease[counter]} /> : <LayoutThree release={arrayRelease[counter]} />)
   }
   return (
     <SliderContainer>
@@ -73,7 +73,7 @@ function Slider() {
       <CircleLeft onClick={() => showLayout('left')}>
         <LeftOutlined style={{ fontSize: '20px', color: '#fff' }} />
       </CircleLeft>
-      <CircleRight onClick={() => showLayout('')}>
+      <CircleRight onClick={showLayout}>
         <RightOutlined style={{ fontSize: '20px', color: '#fff' }} />
       </CircleRight>
       {show}
