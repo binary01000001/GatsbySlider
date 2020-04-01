@@ -1,6 +1,8 @@
 import React from 'react'
 import { RightOutlined, LeftOutlined } from '@ant-design/icons'
-import LayoutOne from './Layout1/index'
+import LayoutOne from './Layout1'
+import LayoutTwo from './Layout2'
+import LayoutThree from './Layout3'
 import {
   SliderContainer,
   CircleClose,
@@ -17,7 +19,9 @@ function Slider() {
       <CircleRight>
         <RightOutlined style={{ fontSize: '20px', color: '#fff' }} />
       </CircleRight>
-      <LayoutOne />
+      {/* <LayoutOne /> */}
+      {/* <LayoutTwo /> */}
+      <LayoutThree />
     </SliderContainer>
   )
 }
