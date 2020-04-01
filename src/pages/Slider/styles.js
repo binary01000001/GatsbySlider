@@ -27,6 +27,7 @@ export const Title = styled.div`
   display:flex;
   align-items:center;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+  user-select:none;
 `
 export const Arrow = styled.div`
   width: 0; 
@@ -56,18 +57,21 @@ export const Container = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   padding:20px 25px;
   border-radius:20px;
+  user-select:none;
 `
 export const Image = styled.div` 
   position:absolute;
   top:10px;
   right:15px;
   z-index:5;
+  user-select:none;
 `
 export const Person = styled.div` 
   position:absolute;
   top:74%;
   left:14px;
   z-index:5;
+  user-select:none;
 `
 export const CircleLeft = styled.div`
   position:absolute;

@@ -2,7 +2,7 @@ import React from 'react'
 
 function LayoutThree() {
   return (
-    <div style={{ width: '100%', display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
+    <div style={{ width: '100%', display: 'flex', alignItems: 'center', flexDirection: 'column', userSelect: 'none' }}>
       <div style={{ width: '100%', padding: '20px 20px', display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }}>
         <div style={{ fontWeight: 'bold', fontSize: '18px', color: '#3BBAC8' }}>Nota:</div>
       </div>
@@ -11,16 +11,16 @@ function LayoutThree() {
           Si desconoces el proceso para validar tu cuenta de correo, comunícate con nuestra área de servicio a cliente.
         </div>
       </div>
-      <div style={{ width: '100%', display: 'flex', padding:'20px', position: 'absolute', bottom:'0px'}}>
-        <div style={{ width: '50%', display: 'flex', flexDirection: 'column', justifyContent:'center', alignItems:'center', /* border:'1px solid blue', */ padding:'20px', textAlign: 'center' }}>
-          <div style={{fontWeight:'bold', fontSize:'16px', color:'#3BBAC8'}}>Gloria Barrios</div>
-          <div style={{fontWeight:'bold', fontSize:'14px', color:'#072B48'}} >Gerente Atención a Clientes</div>
+      <div style={{ width: '100%', display: 'flex', padding: '20px', position: 'absolute', bottom: '0px' }}>
+        <div style={{ width: '50%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', /* border:'1px solid blue', */ padding: '20px', textAlign: 'center' }}>
+          <div style={{ fontWeight: 'bold', fontSize: '16px', color: '#3BBAC8' }}>Gloria Barrios</div>
+          <div style={{ fontWeight: 'bold', fontSize: '14px', color: '#072B48' }} >Gerente Atención a Clientes</div>
           <div>(55) 6792 2318</div>
           <div>gloria@sfleet.mx </div>
         </div>
-        <div style={{ width: '50%', display: 'flex', flexDirection: 'column', justifyContent:'center', alignItems:'center', /* border:'1px solid blue', */ padding:'20px', textAlign: 'center' }}>
-        <div style={{fontWeight:'bold', fontSize:'16px', color:'#3BBAC8'}}>Camila Arreola</div>
-          <div style={{fontWeight:'bold', fontSize:'14px', color:'#072B48'}}>Ejecutivo Atención a Clientes</div>
+        <div style={{ width: '50%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', /* border:'1px solid blue', */ padding: '20px', textAlign: 'center' }}>
+          <div style={{ fontWeight: 'bold', fontSize: '16px', color: '#3BBAC8' }}>Camila Arreola</div>
+          <div style={{ fontWeight: 'bold', fontSize: '14px', color: '#072B48' }}>Ejecutivo Atención a Clientes</div>
           <div>(55) 8842 7643 ext. 203</div>
           <div>jose.jimenez@sfleet.mx </div>
         </div>
