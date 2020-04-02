@@ -74,6 +74,7 @@ export const Person = styled.div`
   user-select:none;
 `
 export const CircleLeft = styled.div`
+  display: ${props => props.active ? 'flex' : 'none'};
   position:absolute;
   top:calc(50% - 30px);
   height:60px;
@@ -83,11 +84,11 @@ export const CircleLeft = styled.div`
   z-index:6;
   left:-50px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
-  display:flex;
   align-items:center;
   justify-content:center;
 `
 export const CircleRight = styled.div`
+  display: ${props => props.active ? 'flex' : 'none'};
   position:absolute;
   top:calc(50% - 30px);
   height:60px;
@@ -96,7 +97,6 @@ export const CircleRight = styled.div`
   background:#072B48;
   z-index:6;
   right:-50px;
-  display:flex;
   align-items:center;
   justify-content:center;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);

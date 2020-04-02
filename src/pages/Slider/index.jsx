@@ -11,6 +11,8 @@ import {
 } from './styles.js'
 function Slider() {
   const [position, setPosition] = useState(0)
+  const [activeLeft, setActiveLeft] = useState(false)
+  const [activeRight, setActiveRight] = useState(true)
   const [show, setShow] = useState('')
   const arrayRelease = [
     {
@@ -47,10 +49,12 @@ function Slider() {
     }
   ]
   useEffect(() => {
-    setShow(arrayRelease[position].type === 'layout1' ? <LayoutOne release={arrayRelease[position]} /> : arrayRelease[0].type === 'layout2' ? <LayoutTwo release={arrayRelease[position]} /> : <LayoutThree release={arrayRelease[position]} />)
-    console.log(arrayRelease)
+    loader(position)
   }, [])
-
+  
+  const loader = (value) => {
+    setShow(arrayRelease[value].type === 'layout1' ? <LayoutOne release={arrayRelease[value]} /> : arrayRelease[value].type === 'layout2' ? <LayoutTwo release={arrayRelease[value]} /> : <LayoutThree release={arrayRelease[value]} />)
+  }
   function showLayout(direction) {
     debugger
     let counter = position
@@ -58,6 +62,7 @@ function Slider() {
       if(position !== 0){
         counter = counter -1
         setPosition(counter)
+        setActiveLeft(true)
       }
     } else {
       if(position < (arrayRelease.length-1)){
@@ -65,15 +70,17 @@ function Slider() {
         setPosition(counter)
       }
     }
+    counter === 0 ? setActiveLeft(false) : setActiveLeft(true)
+    counter === (arrayRelease.length-1) ? setActiveRight(false) : setActiveRight(true)
     position !== counter && setShow(arrayRelease[counter].type === 'layout1' ? <LayoutOne release={arrayRelease[counter]} /> : arrayRelease[counter].type === 'layout2' ? <LayoutTwo release={arrayRelease[counter]} /> : <LayoutThree release={arrayRelease[counter]} />)
   }
   return (
     <SliderContainer>
       <CircleClose />
-      <CircleLeft onClick={() => showLayout('left')}>
+      <CircleLeft active={activeLeft} onClick={() => showLayout('left')}>
         <LeftOutlined style={{ fontSize: '20px', color: '#fff' }} />
       </CircleLeft>
-      <CircleRight onClick={showLayout}>
+      <CircleRight active={activeRight} onClick={showLayout}>
         <RightOutlined style={{ fontSize: '20px', color: '#fff' }} />
       </CircleRight>
       {show}
